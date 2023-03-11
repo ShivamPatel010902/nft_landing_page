@@ -1,0 +1,38 @@
+.team-img{
+    left: 8%;
+}
+
+.how-img{
+    width: 100%;
+}
+
+@media screen and (max-width: 865px) {
+    
+    .s6-container{
+        width: 80%; 
+    }
+
+    .s6-info-container{
+        width: 100%;
+    }
+
+    .s3-box-image{
+        width: 80%;
+        left : 9%;
+        margin-bottom: 2%;
+    }
+
+    .how-text{
+       padding-right: 0px;
+    }
+
+    .team-img{
+        width: 100%;
+        left: 0%;
+    }
+
+    .how-img{
+        width: 100%;
+        left:0%;
+    }
+}

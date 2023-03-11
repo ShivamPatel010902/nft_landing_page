@@ -1,0 +1,255 @@
+
+:root {
+	--header-height: 3rem;
+	--hue: 45;
+	--sat: 98%;
+	--first-color: hsl(var(--hue), var(--sat), 60%);
+	--title-color: hsl(var(--hue), 4%, 15%);
+	--text-color: hsl(var(--hue), 4%, 35%);
+	--text-color-light: hsl(var(--hue), 4%, 65%);
+	--body-color: hsl(var(--hue), 0%, 100%);
+	--scroll-bar-color: hsl(var(--hue), 4%, 85%);
+	--scroll-thumb-color: hsl(var(--hue), 4%, 75%);
+	--font-semi-bold: 600;
+	--font-bold: 700;
+	--mb-0-5: .5rem;
+	--mb-0-75: .75rem;
+	--mb-1: 1rem;
+	--mb-1-5: 1.5rem;
+	--mb-2: 2rem;
+	--z-tooltip: 10;
+	--z-fixed: 1000;
+}
+
+@media screen and (min-width: 968px) {
+	:root {
+		--biggest-font-size: 3rem;
+		--h2-font-size: 1.75rem;
+		--h3-font-size: 1.25rem;
+		--normal-font-size: 1rem;
+		--small-font-size: .875rem;
+		--smaller-font-size: .813rem;
+	}
+}
+
+*,
+::before,
+::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+
+	background-color: var(--body-color);
+	color: var(--text-color);
+	transition: .5s;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+.header {
+	width: 100%;
+	background-color: var(--body-color);
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding: 10px;
+	z-index: var(--z-fixed);
+	transition: .5s;
+	display: flex;
+	justify-content: center;
+}
+
+.nav {
+	height: var(--header-height);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.container {
+	max-width: 968px;
+	margin-left: var(--mb-1-5);
+	margin-right: var(--mb-1-5);
+}
+
+
+.nav__list {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	row-gap: 1.5rem;
+	margin: 10px;
+}
+
+.nav__link,
+.nav__logo,
+.nav__toggle {
+	color: var(--title-color);
+	font-weight: var(--font-semi-bold);
+}
+
+.nav__link {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.nav__toggle {
+	font-size: 1.3rem;
+	cursor: pointer;
+	display: none;
+}
+
+.button {
+	display: inline-block;
+	background-color: var(--first-color);
+	color: #1A1A1A;
+	padding: .75rem 1.5rem;
+	border-radius: 3rem;
+	font-weight: var(--font-semi-bold);
+	transition: .3s;
+	margin: 10px;
+}
+
+
+::-webkit-scrollbar {
+	width: .6rem;
+	border-radius: .5rem;
+	background-color: var(--scroll-bar-color);
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: var(--scroll-thumb-color);
+	border-radius: .5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: var(--text-color-light);
+}
+
+@media screen and (max-width: 870px) {
+
+	.nav__list {
+		position: absolute;
+		flex-direction: column;
+		align-items: center;
+		left: 0;
+		right: 0;
+		margin-top: 30px;
+		padding: 10px;
+		background-color: var(--body-color);
+		display: none;
+	}
+
+	.header {
+		display: block;
+	}
+
+	.nav__toggle {
+		display: block;
+	}
+
+	.button__header {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 870px) {
+
+	.nav__list.expanded
+	{
+            display:flex;
+	}
+
+}
+.flicker-text-container .neon {
+	font-family: "Monoton", cursive;
+	font-size: 30px;
+	color: #18b7f6;
+	font-weight: 400;
+	letter-spacing: 8px;
+	text-shadow: 1px 0px 4px #d5e1ff, 2px 0px 4px #d5ddff, 3px 0px 4px #d5dfff, 2px 0px 3px #2c91d4, 2px 3px 15px #2c6cd4, 2px 0px 15px, 5px 0px 125px, 20px 0vw 200px #2c80d4, 40px 0vw 200px #2c9cd4;
+}
+
+.flicker-text-container .flicker-1 {
+	animation: flicker 50s linear infinite;
+}
+
+.flicker-text-container .flicker-2 {
+	animation: flicker 5s linear infinite;
+	animation-delay: 1s;
+}
+
+.flicker-text-container .flicker-3 {
+	animation: flicker 3s linear infinite;
+	animation-delay: 2s;
+}
+
+.flicker-text-container .flicker-4 {
+	animation: flicker 7s linear infinite;
+	animation-delay: 3s;
+}
+
+@keyframes flicker {
+
+	0%,
+	19.999%,
+	22%,
+	62.999%,
+	64%,
+	64.999%,
+	70%,
+	100% {
+		opacity: 0.99;
+	}
+
+	20%,
+	21.999%,
+	63%,
+	63.999%,
+	65%,
+	69.999% {
+		opacity: 0.4;
+	}
+}
+
+.flicker-text-container .gear-box {
+	font-size: 40px;
+}
+
+.flicker-text-container .gear-box .gear {
+	color: #8fdcfa;
+}
+
+.flicker-text-container .gear-box .gear-1 {
+	animation: gear 12s linear infinite;
+}
+
+.flicker-text-container .gear-box .gear-2 {
+	animation: gear 12s linear infinite reverse;
+	position: relative;
+	top: -21px;
+	left: -11px;
+}
+
+@keyframes gear {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}

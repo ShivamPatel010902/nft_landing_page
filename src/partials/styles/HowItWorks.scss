@@ -1,0 +1,27 @@
+.howitworks{
+    img{
+        height:200%;
+        width:auto !important;
+    }
+    .is-blur-1{
+        background-image: linear-gradient(45deg, #a47ecb, #a47ecb);
+    }
+    .is-blur-2{
+        background-image: linear-gradient(45deg, #602ead, #602ead);
+    }
+    .is-blur-3{
+        background-image: linear-gradient(45deg, #d942c1, #d942c1);
+    }
+    .is-blur-4{
+        background-image: linear-gradient(45deg, #602ead, #602ead);
+    }
+    .is-blur-5{
+        background-image: linear-gradient(45deg, #602ead, #602ead);
+    }
+    .s2-info-container{
+        justify-content: center;
+        h2{
+            font-size: 35px;
+        }
+    }
+}

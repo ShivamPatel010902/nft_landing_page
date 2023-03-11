@@ -1,0 +1,129 @@
+// Import Google Monoton Font
+@import url("https://fonts.googleapis.com/css?family=Monoton");
+
+.landing {
+  .hero-info {
+    p {
+      font-size: 1.2em;
+    }
+    .gtext {
+      font-size: 1.3em;
+      font-weight: 200;
+    }
+    h1 {
+      font-size: 3em;
+    }
+  }
+
+  @media screen and (max-width: 865px) {
+    .flicker-text {
+      display: none;
+    }
+
+    .neon {
+      font-size: 20px;
+    }
+
+    .gear-box {
+      display: none;
+    }
+  }
+
+  .flicker-text-container {
+    .neon {
+      font-family: "Monoton", cursive;
+      font-size: 130px;
+      color: #18b7f6;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      // transform: translate(-50%, -50%);
+      font-weight: 400;
+      letter-spacing: 8px;
+
+      text-shadow: 1px 0px 4px #d5e1ff, 2px 0px 4px #d5ddff, 3px 0px 4px #d5dfff,
+        2px 0px 3px #2c91d4, 2px 3px 15px #2c6cd4, 2px 0px 15px, 5px 0px 125px,
+        20px 0vw 200px #2c80d4, 40px 0vw 200px #2c9cd4;
+    }
+
+    .flicker-1 {
+      animation: flicker 50s linear infinite;
+    }
+    .flicker-2 {
+      animation: flicker 5s linear infinite;
+      animation-delay: 1s;
+    }
+    .flicker-3 {
+      animation: flicker 3s linear infinite;
+      animation-delay: 2s;
+    }
+    .flicker-4 {
+      animation: flicker 7s linear infinite;
+      animation-delay: 3s;
+    }
+
+    @keyframes flicker {
+      0%,
+      19.999%,
+      22%,
+      62.999%,
+      64%,
+      64.999%,
+      70%,
+      100% {
+        //text-shadow: none;
+        opacity: 0.99;
+      }
+      20%,
+      21.999%,
+      63%,
+      63.999%,
+      65%,
+      69.999% {
+        opacity: 0.4;
+      }
+    }
+
+    .gear-box {
+      font-size: 5em;
+      position: absolute;
+      top: 19%;
+      left: 60%;
+      .gear {
+        color: #8fdcfa;
+        // text-shadow: 1px 0px 4px #1295d2, 2px 0px 4px #4098df, 3px 0px 4px #5774d2,
+      }
+      .gear-1 {
+        animation: gear 12s linear infinite;
+      }
+      .gear-2 {
+        // reverse direction
+        animation: gear 12s linear infinite reverse;
+        position: relative;
+        top: -21px;
+        left: -11px;
+      }
+
+      @keyframes gear {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    }
+  }
+}
+// Create Up Down Animation
+@keyframes upDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
